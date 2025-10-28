@@ -5,14 +5,14 @@ public class LeadersArray{
 		int count=0;
 		
 		for(int i=0;i<n;i++){
-			boolean isLeader=true;
+			boolean isLeader=false;
 			for(int j=i+1;j<n;j++){
 				if(arr[i]<arr[j]){
-					isLeader=false;
+					isLeader=true;
 					break;
 				}
 			}
-			if(isLeader){
+			if(!isLeader){
 				count++;
 				System.out.print(arr[i]+" ");
 			}
